@@ -1,0 +1,85 @@
+<%- include('../Includes/begin.ejs') %>
+
+    <%- include('../Includes/student_nav.ejs') %>
+
+
+        <section id="content-wrapper">
+            <main role="main" class="pt-5 main">
+                <div class="header pb-4 pb-sm-8 pt-5 pt-lg-4 d-flex align-items-center"
+                    style="max-height: 100px; background-size: cover; background-position: center top;">
+                    <h1>Hello <%= name %>
+                    </h1>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card mb-5" style="box-shadow: 0 1rem 2rem 0 rgba(136, 152, 170, .15) !important;">
+                            <img height="250" class="card-img-top"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR323w3rlZBnnN1KVPw6bFOPIjkrCCtyRmd7g&usqp=CAU"
+                                alt="image">
+                            <div class="card-body">
+                                <h5 class="card-title">Attendance</h5>
+                                <p class="card-text">View the attendance status for each of your courses. (Make sure
+                                    that
+                                    the atted. is atleast 75%) </p>
+
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-wrapper text-center d-flex justify-content-between"
+                                    style="color: #fff;">
+                                    <a href="/student/attendance" class="btn btn-primary">View Attendance</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="card mb-5" style="box-shadow: 0 1rem 2rem 0 rgba(136, 152, 170, .15) !important;">
+                            <img height="250" class="card-img-top"
+                                src="https://gdb.voanews.com/B181CAA1-3DB7-4F63-907F-4D306532EC3B_w1200_r1.png"
+                                alt="image">
+                            <div class="card-body">
+                                <h5 class="card-title">Marks</h5>
+                                <p class="card-text">View the marks obtained for each of your courses. These include
+                                    the
+                                    marks upto your previous semester.</p>
+                                
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-wrapper text-center d-flex justify-content-between"
+                                    style="color: #fff;">
+                                    <a href="/student/marks" class="btn btn-primary">View Marks</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="card mb-5" style="box-shadow: 0 1rem 2rem 0 rgba(136, 152, 170, .15) !important;">
+                            <img height="250" class="card-img-top"
+                                src="https://c8.alamy.com/comp/2ADTPT8/colorful-school-timetable-weekly-schedule-with-supplies-and-student-items-2ADTPT8.jpg"
+                                alt="image">
+                            <div class="card-body">
+                                <h5 class="card-title">Time Table</h5>
+                                <p class="card-text">View your timetable. (It shows the time table of all the
+                                    courses
+                                    you
+                                    have registered for!)</p>
+                                
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-wrapper text-center d-flex justify-content-between"
+                                    style="color: #fff;">
+                                    <a href="/student/timetable" class="btn btn-primary">View Timetable</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </section>
+
+        <%- include('../Includes/student_end.ejs') %>
