@@ -13,9 +13,9 @@ Ruby
 ()    => Login Selection Page
 
 Priyanka
-()    => Admin Login
-()    => Staff Login
-()    => Student Login
+(x)    => Admin Login
+(x)    => Staff Login
+(x)    => Student Login
 
 Shivam
 ()    => Admin Dashboard
