@@ -10,7 +10,7 @@ Divya
 ()    => Home Page
 
 Ruby
-()    => Login Selection Page
+(x)    => Login Selection Page
 
 Priyanka
 ()    => Admin Login
