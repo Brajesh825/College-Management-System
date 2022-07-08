@@ -1,9 +1,11 @@
 const path = require('path');
 const env = require('dotenv');
+const bodyParser = require('body-parser');
 
 const express = require('express');
 
 const app = express();
+
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -20,6 +22,12 @@ app.get("/", (req, res) => {
 app.get("/index", (req, res) => {
     res.render("index")
 })
+
+// routes
+const adminRoutes = require("./routes/adminRoutes")
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/admin",adminRoutes)
+
 app.get("/admin/login", (req, res) => {
     res.render("Admin/login")
 })
