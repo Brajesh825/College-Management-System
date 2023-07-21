@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="CSS/error404.css">
 
     <link href="https://fonts.googleapis.com/css?family=Trocchi" rel="stylesheet">
+
 </head>
 
 <body>
@@ -25,7 +26,7 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a href="#" class="navbar-brand"><b>CMS SCE</b></a>
+                    <a href="#" class="navbar-brand"><b>CMS NSIT</b></a>
                 </div>
             </div>
         </nav>
@@ -38,6 +39,7 @@
         <div id="bottom">Sorry, you are not authorized!</div>
 
         <label id="errormsg" class="pt-2">
+            <%- include('./Includes/messages') %>
         </label>
         <button class="btn btn-primary btn-lg" onclick="location.href = '/'">
             <a style="color: white;">Home</a>

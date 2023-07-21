@@ -1,0 +1,76 @@
+<%- include('../Includes/begin.ejs') %>
+<%- include('../Includes/staff_nav.ejs') %>
+<section id="content-wrapper">
+    <main role="main" class="pt-5 main">
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header pb-4 pb-sm-8 pt-5 pt-lg-8 d-flex align-items-center"
+                style="height: 100px; background-size: cover; background-position: center top;">
+                <!-- Header container -->
+            </div>
+            <!-- Page content -->
+            <div class="container-fluid mt--7">
+                <div class="row">
+                    <div class="col-xl-12 order-xl-1">
+                        <div class="card bg-secondary shadow">
+                            <div class="card-header bg-white border-0">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h3 class="mb-0">Class Time Table</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="form-control-label mb-5"><b>NAME : </b>
+                                    <%= staffData.s_name %> || <b>SEMESTER : </b>
+                                    1
+                                </h6>
+                                <div class="pl-lg-4">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group focused">
+                                                <div class="table-responsive" style="overflow-x: hidden;">
+                                                    <table class="table table-striped">
+                                                        <thead class="thead-dark">
+                                                            <tr>
+                                                                <th scope="col"></th>
+                                                                <% for (let i = 0; i < startTimes.length; ++i) {%>
+                                                                <th scope="col"><%=startTimes[i]%> - <%=endTimes[i]%>
+                                                                </th>
+                                                                <%}%>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <% for (let i = 0; i < dayNames.length; ++i) {%>
+                                                            <tr>
+                                                                <th><%=dayNames[i]%></th>
+                                                                <% for (let j = 0; j < startTimes.length; ++j) {%>
+                                                                <td>
+                                                                    <% for (let k = 0; k < timeTableData.length; ++k) {%>
+                                                                    <%if(timeTableData[k].day == i && timeTableData[k].start_time[0] == startTimes[j][0] && timeTableData[k].start_time[1] == startTimes[j][1]) {%>
+                                                                    <%=timeTableData[k].c_id%>
+                                                                    <%}%>
+                                                                    <%}%>
+                                                                </td>
+                                                                <%}%>
+                                                            </tr>
+                                                            <%}%>
+                                                                </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+
+<%- include('../Includes/staff_end.ejs') %>
